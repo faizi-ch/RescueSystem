@@ -1,0 +1,16 @@
+﻿<dx:DXWindow x:Class="Station.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:tb="http://www.hardcodet.net/taskbar"
+        Title="MainWindow" Height="673.306" Width="1177.541" Loaded="DXWindow_Loaded" StateChanged="DXWindow_StateChanged" Closing="DXWindow_Closing">
+    <Grid>
+        <WebBrowser Name="Browser" ObjectForScripting="MainWindow" HorizontalAlignment="Left" Height="571" Margin="10,25,0,0" VerticalAlignment="Top" Width="1134" Loaded="Browser_Loaded"/>
+        <Button Name="ShowButton" Content="Show Route" HorizontalAlignment="Left" Margin="510,0,0,0" VerticalAlignment="Top" Width="150" Click="ShowButton_Click" Height="25"/>
+
+        <tb:TaskbarIcon Name="TaskbarIcon" IconSource="rescue.ico" Visibility="Visible"
+      ToolTipText="Rescue Station"  TrayMouseDoubleClick="TaskbarIcon_OnTrayMouseDoubleClick"/>
+        <Label Name="Label" Content="1 new emergency" Visibility="Hidden" HorizontalAlignment="Left" Margin="412,0,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</dx:DXWindow>
